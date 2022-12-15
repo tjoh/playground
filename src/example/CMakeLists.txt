@@ -14,3 +14,13 @@ target_include_directories(example PRIVATE
 target_link_libraries(example PRIVATE
     mylib
 )
+
+install(TARGETS example
+    CONFIGURATIONS Debug
+    DESTINATION ${CMAKE_SOURCE_DIR}/bin/Debug/bin
+)
+
+install(TARGETS example
+    CONFIGURATIONS Release
+    DESTINATION ${CMAKE_SOURCE_DIR}/bin/Release/bin
+)
